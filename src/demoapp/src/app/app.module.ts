@@ -7,10 +7,20 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
 import { APIPrefixInterceptor } from './core/interceptors/api-prefix.interceptor';
 import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { HomeComponent } from './pages/home/home.component';
+import { FileManagerModule } from './shared/file-manager/file-manager.module';
 
 @NgModule({
-  declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, CoreModule],
+  declarations: [AppComponent, HomeComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    CoreModule,
+    SharedModule,
+    FileManagerModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

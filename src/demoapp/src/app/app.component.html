@@ -1,11 +1,11 @@
-<div class="dropdown">
+<!-- <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     Dropdown
   </button>
   <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Dropdown item</a></li>
-    <li><a class="dropdown-item" href="#">Dropdown item</a></li>
-    <li><a class="dropdown-item" href="#">Dropdown item</a></li>
+    <li *ngFor="let weather of weathers"><a class="dropdown-item" href="#">{{weather.summary}}</a></li>
   </ul>
-</div>
+</div> -->
+
+
 <router-outlet></router-outlet>

@@ -7,15 +7,17 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  weathers: any;
   constructor(private http: HttpClient) {
-    http.get('WeatherForecast').subscribe(
-      (res) => {
-        console.log(res);
-      },
-      (err) => {
-        debugger;
-      }
-    );
+    // http.get('WeatherForecast').subscribe(
+    //   (res) => {
+    //     this.weathers = res;
+    //     console.log(res);
+    //   },
+    //   (err) => {
+    //     debugger;
+    //   }
+    // );
   }
   title = 'demoapp';
 }

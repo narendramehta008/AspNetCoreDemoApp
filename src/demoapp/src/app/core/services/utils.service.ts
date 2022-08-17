@@ -270,6 +270,36 @@ export class UtilsService {
   //     }
   //   });
   // }
+
+  fileTypeClass(fileName: string): string {
+    const fileClass = 'file-item-icon text-secondary';
+    if (!fileName.includes('.')) {
+      return fileClass + ' far fa-folder';
+    }
+    // let extension = fileName.slice(fileName.lastIndexOf('.'));
+    let extension = fileName.slice(fileName.lastIndexOf('.') + 1);
+    if (extension == 'html') {
+      return fileClass + ' fab fa-html5';
+    } else if (extension == 'zip' || extension == 'rar') {
+      return fileClass + ' far fa-file-archive';
+    } else if (extension == 'doc') {
+      return fileClass + ' far fa-file-word';
+    } else if (extension == 'js') {
+      return fileClass + ' fab fa-js';
+    } else if (extension == 'txt') {
+      return fileClass + ' far fa-file-alt';
+    } else if (extension == 'css') {
+      return fileClass + ' fab fa-css';
+    } else if (extension == 'pdf') {
+      return fileClass + ' far fa-file-pdf';
+    } else if (extension == 'mp3') {
+      return fileClass + ' far fa-file-audio';
+    } else if (extension == 'mp4' || extension == 'avi') {
+      return fileClass + ' far fa-file-video';
+    } else {
+      return fileClass + ' far fa-file';
+    }
+  }
 }
 
 export interface Themes {
